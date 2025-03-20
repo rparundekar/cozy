@@ -1,6 +1,10 @@
-import { useState } from "react";
+import Cozy from "./components/CozyPage";
 function App() {
-  return <>cozy</>;
+  return (
+    <>
+      <Cozy />
+    </>
+  );
 }
 
 export default App;
