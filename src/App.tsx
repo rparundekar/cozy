@@ -1,7 +1,13 @@
 import "./App.css";
 
+import CozyPage from "./components/cozy";
+
 function App() {
-  return <>cozy</>;
+  return (
+    <>
+      <CozyPage />
+    </>
+  );
 }
 
 export default App;
