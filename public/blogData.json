@@ -1,0 +1,25 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Primer Post",
+            "date": "2025-03-21",
+            "tags": [
+                "React",
+                "Tailwind",
+                "Frontend"
+            ],
+            "content": "Este es el contenido de mi primer post. Hablamos sobre cómo usar React con Tailwind CSS para crear interfaces elegantes."
+        },
+        {
+            "id": 2,
+            "title": "Segundo Post",
+            "date": "2025-03-20",
+            "tags": [
+                "JavaScript",
+                "Web Development"
+            ],
+            "content": "En este post exploramos las mejores prácticas para desarrollar aplicaciones web modernas con JavaScript."
+        }
+    ]
+}

@@ -1,9 +1,17 @@
-import Cozy from "./components/CozyPage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Blog from "@/components/blog/Blog";
+import SinglePost from "@/components/blog/SinglePost";
+import CozyPage from "@/components/CozyPage";
+
 function App() {
   return (
-    <>
-      <Cozy />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<CozyPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/post/:id" element={<SinglePost />} />
+      </Routes>
+    </Router>
   );
 }
 

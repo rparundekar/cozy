@@ -12,7 +12,6 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils"; // typical shadcn utility for conditional classes
 
 export default function CozyPage() {
   // Example data (replace with your own)
