@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Blog from "@/components/blog/Blog";
 import SinglePost from "@/components/blog/SinglePost";
-import CozyPage from "@/components/CozyPage";
+import CozyPage from "@/pages/CozyPage";
 
 function App() {
   return (
