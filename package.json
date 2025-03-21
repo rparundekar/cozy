@@ -7,9 +7,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api": "json-server --watch src/blog/blogData.json --port 8000"
   },
   "dependencies": {
+    "@blocknote/core": "^0.26.0",
+    "@blocknote/mantine": "^0.26.0",
+    "@blocknote/react": "^0.26.0",
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-scroll-area": "^1.2.3",
     "@radix-ui/react-separator": "^1.1.2",
@@ -18,6 +22,7 @@
     "@tailwindcss/vite": "^4.0.14",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "json-server": "^1.0.0-beta.3",
     "lucide-react": "^0.483.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
