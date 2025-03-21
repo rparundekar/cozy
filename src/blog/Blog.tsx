@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 interface Post {
-  id: number;
+  id: string;
   title: string;
   date: string;
   tags: string[];
