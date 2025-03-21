@@ -1,11 +1,19 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
-import Back from "../Back";
+import Back from "./Back";
+
+interface Post {
+  id: number;
+  title: string;
+  date: string;
+  tags: string[];
+  content: string;
+}
 
 const SinglePost = () => {
   const { id } = useParams();
-  const [post, setPost] = useState(null);
+  const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
     console.log("ID recibido:", id);
@@ -13,7 +21,7 @@ const SinglePost = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log("Datos cargados:", data);
-        const selectedPost = data.posts.find((p) => p.id === Number(id));
+        const selectedPost = data.posts.find((p: Post) => p.id === Number(id));
         console.log("Post encontrado:", selectedPost);
         setPost(selectedPost);
       })
