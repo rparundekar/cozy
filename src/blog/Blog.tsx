@@ -14,9 +14,15 @@ const Blog = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch("/blogData.json")
+    fetch("http://localhost:8000/posts")
       .then((response) => response.json())
-      .then((data) => setPosts(data.posts))
+      .then((data) => {
+        if (data) {
+          setPosts(data);
+        } else {
+          console.error("Posts not found in response");
+        }
+      })
       .catch((error) => console.error("Error cargando el blog:", error));
   }, []);
 

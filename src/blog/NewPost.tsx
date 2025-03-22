@@ -2,22 +2,22 @@ import "@blocknote/core/fonts/inter.css";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 import { useCreateBlockNote } from "@blocknote/react";
-import { useState } from "react";
+//import { useState } from "react";
 
 export default function App() {
   const editor = useCreateBlockNote({});
-  const [title, setTitle] = useState("");
-  const [tags, setTags] = useState<string[]>([]);
+  //const [title, setTitle] = useState("");
+  //const [tags, setTags] = useState<string[]>([]);
 
   const handleSave = async () => {
     if (!editor) return;
 
     const newPost = {
-      title,
-      content: JSON.stringify(editor?.document), // Obtiene el contenido en formato JSON
-      tags: String(tags)
-        .split(",")
-        .map((tag) => tag.trim()), // Convierte a string antes de dividir
+      //title,
+      content: JSON.stringify(editor?.document),
+      //tags: String(tags)
+      //  .split(",")
+      //  .map((tag) => tag.trim()),
       date: new Date().toISOString().split("T")[0],
     };
 
@@ -39,7 +39,7 @@ export default function App() {
   return (
     <div>
       <h1>Crear Nuevo Post</h1>
-      <input
+      {/* <input
         type="text"
         placeholder="Título del post"
         value={title}
@@ -52,7 +52,7 @@ export default function App() {
         onChange={(e) =>
           setTags(e.target.value.split(",").map((tag) => tag.trim()))
         }
-      />
+      /> */}
       <BlockNoteView editor={editor} />
       <button onClick={handleSave}>Guardar Post</button>
     </div>
